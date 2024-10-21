@@ -1028,10 +1028,6 @@ class Admin extends App {
 	}
 
 	public function ajax_set_image_optimization_campaign( $request ) {
-		if ( ! current_user_can( 'install_plugins' ) ) {
-			return;
-		}
-
 		if ( empty( $request['source'] ) ) {
 			return;
 		}
